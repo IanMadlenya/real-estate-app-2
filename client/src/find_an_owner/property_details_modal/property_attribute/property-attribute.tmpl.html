@@ -1,0 +1,24 @@
+<div class="row rea-property_attribute">
+    <div class="col-md-5 rea-property_attribute-title">
+        {{ attributeTitle }}:
+    </div>
+    <div class="col-md-7 rea-property_attribute-value" [hidden]="isEditing">
+        {{ attributeValue }}
+        <span class="fa fa-pencil"
+              title="Edit attribute"
+              aria-hidden="true" (click)="editPropAttribute(input)">
+        </span>
+    </div>
+    <div class="col-md-7 rea-property_attribute-ingrid" [hidden]="!isEditing">
+        <!--todo incorrect on mobile phones -->
+        <input type="text" value="{{ attributeValue }}" #input>
+        <button class="fa fa-check rea-property_attribute-ingrid-save"
+                aria-hidden="true"
+                title="Save attribute"
+                (click)="saveAttribute(input.value)"></button>
+        <button class="fa fa-times rea-property_attribute-ingrid-cancel"
+                aria-hidden="true"
+                title="Cancel editing"
+                (click)="cancelEditing()"></button>
+    </div>
+</div>

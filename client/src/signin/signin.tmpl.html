@@ -1,0 +1,67 @@
+<app-header [page]="'Sign In'"></app-header>
+
+<div class="rea-signin rea-content container">
+    <div class="row">
+        <div class="col-md-3"></div>
+        <div class="col-md-6">
+            <div class="rea-content-inner">
+                <div class="rea-content-title hidden-xs">
+                    <h3>Sign In</h3>
+                </div>
+
+                <div *ngIf="signInErrored" class="rea-alert alert alert-danger" role="alert">
+                    <strong>{{errorMessage}}</strong>
+                </div>
+
+                <div *ngIf="signInSucceed" class="rea-alert alert alert-success" role="alert">
+                    <strong>You successfully signed in.</strong>
+                </div>
+
+                <div *ngIf="!signInSucceed" class="well well-lg rea-well rea-inputs">
+                    <form class="form-horizontal"
+                          role="form"
+                          id="rea-login-form"
+                          [formGroup]="signInForm"
+                          (submit)="doSignIn($event)">
+
+                        <div class="form-group">
+                            <label for="rea-login-username" class="col-lg-3 control-label">Username</label>
+                            <div class="col-lg-9">
+                                <input class="form-control rea-input"
+                                       formControlName="username"
+                                       type="text"
+                                       placeholder="Username"
+                                       id="rea-login-username">
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label for="rea-login-password" class="col-lg-3 control-label">Password</label>
+                            <div class="col-lg-9">
+                                <input class="form-control rea-input"
+                                       formControlName="password"
+                                       type="password"
+                                       placeholder="Password"
+                                       id="rea-login-password">
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <div class="col-lg-offset-3 col-lg-9">
+                                <button class="btn btn-primary btn-lg btn-block rea-button"
+                                        type="submit">Sign In
+                                </button>
+                            </div>
+                        </div>
+                    </form>
+                    <div class="rea-signin-reglink">
+                        <a [routerLink]="['/register']" title="Register">
+                            Don’t have an account?
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-3"></div>
+    </div>
+</div>
+
+<app-footer></app-footer>

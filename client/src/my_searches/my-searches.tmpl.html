@@ -1,0 +1,23 @@
+<app-header [page]="'My searches'"></app-header>
+<!--todo another view for mobile devices -->
+<div class="rea-user_searches rea-content container">
+    <div class="row">
+        <div class="col-md-2"></div>
+        <div class="col-md-8">
+            <div class="rea-content-inner">
+                <div class="hidden-xs rea-content-title">
+                    <h3>My searches</h3>
+                </div>
+                <div class="row rea-request_row-header">
+                    <div class="col-md-4">&nbsp;</div>
+                    <div class="col-md-4">Date</div>
+                    <div class="col-md-4">Status</div>
+                </div>
+                <submitted-search *ngFor="let request of requests" [request]="request"></submitted-search>
+            </div>
+        </div>
+        <div class="col-md-2"></div>
+    </div>
+</div>
+
+<app-footer></app-footer>

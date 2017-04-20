@@ -1,0 +1,52 @@
+<div class="modal fade rea-property_modal" id="rea-property_modal" tabindex="-1" role="dialog">
+    <div class="modal-dialog" role="document">
+        <div class="modal-content rea-property_modal-content">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span
+                        aria-hidden="true">&times;</span></button>
+                <h4 class="modal-title">Added properties details</h4>
+            </div>
+            <div class="modal-body">
+                <div *ngFor="let property of properties; let i = index" class="row rea-property_modal-property">
+                    <div class="col-md-offset-2 col-md-8  col-xs-8 col-xs-offset-2">
+                        <div class="rea-property_modal-property_header row">
+                            Property #{{i+1}}
+                            <button type="button" class="close" aria-label="Remove" title="Remove from list"
+                                    (click)="removeProperty(property)">
+                                <span aria-hidden="true">&times;</span>
+                            </button>
+                        </div>
+
+                        <div class="rea-property_modal-property_group">
+                            <property-attribute [attributeTitle]="'Street Address'"
+                                                [attributeRealTitle]="'streetAddress'"
+                                                [attributeValue]="property.streetAddress"
+                                                [propIndex]="i"></property-attribute>
+
+                            <property-attribute [attributeTitle]="'City'"
+                                                [attributeRealTitle]="'city'"
+                                                [attributeValue]="property.city"
+                                                [propIndex]="i"></property-attribute>
+
+                            <property-attribute [attributeTitle]="'State'"
+                                                [attributeRealTitle]="'state'"
+                                                [attributeValue]="property.state"
+                                                [propIndex]="i"></property-attribute>
+
+                            <property-attribute [attributeTitle]="'ZIP code'"
+                                                [attributeRealTitle]="'zip'"
+                                                [attributeValue]="property.zip"
+                                                [propIndex]="i"></property-attribute>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-offset-2 col-md-8 rea-property_modal-noproperties"
+                     [hidden]="properties.length >= 1">There are no properties left in the cart
+                </div>
+            </div>
+            <div class="modal-footer rea-property_modal-footer">
+                <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+            </div>
+        </div>
+    </div>
+</div>

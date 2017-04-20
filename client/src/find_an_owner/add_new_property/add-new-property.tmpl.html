@@ -1,0 +1,65 @@
+<div class="rea-add_new_property rea-inputs">
+    <form class="form-horizontal"
+          role="form"
+          id="rea-add_new_property-form"
+          [formGroup]="addNewPropertyForm"
+          (submit)="doAdd($event)">
+
+        <div class="form-group">
+            <label for="rea-add_new_property-street" class="col-lg-4 control-label">Street Address</label>
+            <div class="col-lg-8">
+                <input class="form-control"
+                       formControlName="streetAddress"
+                       type="text"
+                       placeholder="Street Address"
+                       id="rea-add_new_property-street">
+            </div>
+        </div>
+        <div class="form-group">
+            <label for="rea-add_new_property-city" class="col-lg-4 control-label">City</label>
+            <div class="col-lg-8">
+                <input class="form-control"
+                       formControlName="city"
+                       type="text"
+                       placeholder="City"
+                       id="rea-add_new_property-city">
+            </div>
+        </div>
+        <div class="form-group">
+            <label for="rea-add_new_property-state" class="col-lg-4 control-label">State</label>
+            <div class="col-lg-8">
+                <input class="form-control"
+                       formControlName="state"
+                       type="text"
+                       placeholder="State"
+                       id="rea-add_new_property-state">
+            </div>
+        </div>
+        <div class="form-group">
+            <label for="rea-add_new_property-zip" class="col-lg-4 control-label">ZIP</label>
+            <div class="col-lg-8">
+                <input class="form-control"
+                       formControlName="zip"
+                       type="text"
+                       placeholder="ZIP"
+                       id="rea-add_new_property-zip">
+            </div>
+        </div>
+        <div class="form-group">
+            <div class="col-lg-offset-4 col-lg-8">
+                <button class="btn btn-primary btn-lg btn-block rea-button"
+                        type="submit"
+                        [disabled]="!addNewPropertyForm.valid">Add Property
+                </button>
+            </div>
+        </div>
+        <div class="form-group">
+            <div class="col-lg-offset-4 col-lg-8">
+                <button class="btn btn-primary btn-lg btn-block rea-button"
+                        type="reset"
+                        (click)="doReset($event)">Reset
+                </button>
+            </div>
+        </div>
+    </form>
+</div>

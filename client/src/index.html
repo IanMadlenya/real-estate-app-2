@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <base href="/">
+    <meta charset="UTF-8">
+    <title>Real Estate App</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="lib/bootstrap.min.css">
+    <link rel="stylesheet" href="lib/font-awesome.min.css">
+    <link rel="stylesheet" href="styles/main.css">
+    <script src="lib/jquery.min.js" type="application/javascript"></script>
+    <script src="lib/bootstrap.min.js" type="application/javascript"></script>
+
+    <!-- 1. Load libraries -->
+    <!-- Polyfill(s) for older browsers -->
+    <script src="lib/shim.min.js" type="application/javascript"></script>
+    <script src="lib/zone.js" type="application/javascript"></script>
+    <script src="lib/Reflect.js" type="application/javascript"></script>
+
+    <script src="lib/system.src.js" type="application/javascript"></script>
+
+    <!-- 2. Configure SystemJS -->
+    <script src="systemjs.config.js" type="application/javascript"></script>
+    <script>
+        System.import('app').catch(function (err) {
+            console.error(err);
+        });
+    </script>
+
+</head>
+<body>
+    <real-estate-app>
+        <img src="350.gif" alt="Loading" class="rea-preloader">
+    </real-estate-app>
+</body>
+</html>

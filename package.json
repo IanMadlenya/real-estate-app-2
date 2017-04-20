@@ -1,0 +1,72 @@
+{
+  "name": "rea-web-full",
+  "version": "0.1.0",
+  "private": true,
+  "description": "SPA build using AngularJS 2.0 and MEAN for helping real estate buyers find information about a property owner.",
+  "main": "app.js",
+  "repository": {
+    "type": "git",
+    "url": "git@gitlab.com:hartex/rea-web-full.git"
+  },
+  "author": "Nikolay Kluyev",
+  "bugs": {
+    "url": "https://gitlab.com/hartex/rea-web-full/issues"
+  },
+  "scripts": {
+    "postinstall": "typings install",
+    "typings": "typings",
+    "start": "node ./bin/www",
+    "startMain": "node ./server/main/mainServer",
+    "startProxy": "node ./server/proxy/proxyServer"
+  },
+  "dependencies": {
+    "@angular/common": "2.0.0",
+    "@angular/compiler": "2.0.0",
+    "@angular/compiler-cli": "0.5.0",
+    "@angular/core": "2.0.0",
+    "@angular/forms": "2.0.0",
+    "@angular/http": "2.0.0",
+    "@angular/platform-browser": "2.0.0",
+    "@angular/platform-browser-dynamic": "2.0.0",
+    "@angular/router": "3.0.0",
+    "@angular/platform-server": "2.0.0",
+    "@angular/upgrade": "2.0.0",
+    "angular2-in-memory-web-api": "0.0.20",
+    "body-parser": "^1.15.2",
+    "bootstrap": "^3.3.6",
+    "cookie-parser": "~1.4.3",
+    "core-js": "^2.4.1",
+    "debug": "~2.2.0",
+    "express": "^4.14.0",
+    "font-awesome": "^4.6.3",
+    "http": "0.0.0",
+    "http-proxy": "^1.14.0",
+    "http-proxy-rules": "^1.0.1",
+    "rxjs": "5.0.0-beta.12",
+    "zone.js": "^0.6.23",
+    "https": "^1.0.0",
+    "jade": "^1.11.0",
+    "jquery": "^2.2.4",
+    "mongoose": "^4.5.9",
+    "morgan": "~1.7.0",
+    "reflect-metadata": "^0.1.3",
+    "serve-favicon": "~2.3.0",
+    "systemjs": "^0.19.36",
+    "typescript": "^1.8.10"
+  },
+  "devDependencies": {
+    "concurrently": "^2.0.0",
+    "del": "^2.2.0",
+    "gulp": "^3.9.1",
+    "gulp-connect": "^4.0.0",
+    "gulp-debug": "^2.1.2",
+    "gulp-newer": "^1.1.0",
+    "gulp-sass": "^2.3.1",
+    "gulp-sourcemaps": "^1.6.0",
+    "gulp-typescript": "^2.13.4",
+    "lite-server": "^2.2.0",
+    "merge2": "^1.0.2",
+    "typescript": "^2.0.2",
+    "typings": "^1.3.2"
+  }
+}

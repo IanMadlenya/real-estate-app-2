@@ -1,0 +1,42 @@
+.rea-property_modal {
+  &-content {
+    border-radius: 0;
+
+  }
+
+  &-footer {
+    button {
+      border-radius: 0;
+    }
+  }
+
+  &-property {
+    margin-bottom: 15px;
+  }
+
+  &-property_header {
+    background-color: #98dbc6;
+    border: 1px solid #72ceb1;;
+    color: #fff;
+    padding: 3px;
+    text-align: center;
+    span {
+      padding-right: 2px;
+    }
+  }
+
+  .modal-body {
+    @media (min-width: 992px) {
+      font-size: 16px;
+    }
+  }
+
+  &-property_group {
+
+  }
+
+  &-noproperties {
+    text-align: center;
+  }
+
+}

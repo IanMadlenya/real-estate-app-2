@@ -1,0 +1,17 @@
+.rea-submitted_search {
+
+  &-status {
+
+    &-in_progress {
+      background-color: #ffffd6;
+    }
+
+    &-done {
+      background-color: #d6ead6;
+    }
+
+    &-pending {
+      background-color: #ffd6d6;
+    }
+  }
+}

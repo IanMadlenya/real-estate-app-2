@@ -1,0 +1,41 @@
+<app-header [page]="'Find an owner'"></app-header>
+
+<div class="rea-find_an_owner rea-content container">
+    <div class="rea-content-inner">
+        <div class="row">
+            <div class="hidden-xs rea-content-title">
+                <h3>Find an owner</h3>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-md-2"></div>
+            <div class="col-md-8">
+                <div *ngIf="isCheckoutSucceeded" class="rea-alert alert alert-success" role="alert">
+                    <strong>{{checkoutMessage}}</strong>
+                    <a [routerLink]="['/searches']" title="My searches">
+                        You can view submitted searches here.
+                    </a>
+                </div>
+            </div>
+            <div class="col-md-2"></div>
+        </div>
+        <div class="row">
+            <div class="col-md-2"></div>
+            <div class="col-md-5">
+                <div class="well well-lg rea-well">
+                    <add-new-property></add-new-property>
+                </div>
+            </div>
+            <div class="col-md-3">
+                <div class="well well-lg rea-well">
+                    <property-cart></property-cart>
+                </div>
+            </div>
+            <div class="col-md-2"></div>
+        </div>
+    </div>
+</div>
+
+<property-details-modal></property-details-modal>
+
+<app-footer></app-footer>

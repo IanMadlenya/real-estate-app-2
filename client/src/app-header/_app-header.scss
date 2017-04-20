@@ -1,0 +1,21 @@
+.rea-appheader {
+  h4 {
+    margin-top: 15px;
+    margin-right: -45px;
+    display: inline-block;
+  }
+  .navbar-header {
+    text-align: center;
+  }
+
+  &-firstctrls {
+    margin-bottom: 0;
+  }
+
+  &-lastctrls {
+    margin-top: 0;
+    a {
+      cursor: pointer;
+    }
+  }
+}

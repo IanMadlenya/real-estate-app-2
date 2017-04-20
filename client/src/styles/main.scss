@@ -1,0 +1,16 @@
+/* main sass file */
+@import "../common/common";
+@import "../app-header/app-header";
+@import "../app-footer/app-footer";
+@import "../home/home";
+@import "../register/register";
+@import "../signin/signin";
+@import "../my_searches/my-searches";
+@import "../my_searches/request_row/request-row";
+@import "../my_searches/property_row/property-row";
+@import "../find_an_owner/find-an-owner";
+@import "../settings/settings";
+@import "../find_an_owner/add_new_property/add-new-property";
+@import "../find_an_owner/property_cart/property-cart";
+@import "../find_an_owner/property_details_modal/property-details-modal";
+@import "../find_an_owner/property_details_modal/property_attribute/property-attribute";

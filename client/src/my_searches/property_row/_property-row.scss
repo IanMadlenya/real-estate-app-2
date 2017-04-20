@@ -1,0 +1,34 @@
+.rea-property_row {
+  &-header {
+    div {
+      //background-color: #e1e1e1;
+      background-color: #ededed;
+      padding-top: 3px;
+      padding-bottom: 3px;
+      border: 1px solid #e1e1e1;
+      font-weight: 500;
+      font-size: 15px;
+    }
+  }
+
+  &-content {
+    animation-duration: 0.4s;
+    animation-name: property_row-appears;
+
+    div {
+      padding-top: 2px;
+      padding-bottom: 2px;
+      border: 1px solid #ededed;
+      font-size: 14px;
+    }
+  }
+}
+
+@keyframes property_row-appears {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}

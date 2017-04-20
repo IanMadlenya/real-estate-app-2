@@ -1,0 +1,52 @@
+.rea-request_row {
+
+  &-header {
+    div {
+      //background-color: #e1e1e1;
+      background-color: #ededed;
+      padding-top: 5px;
+      padding-bottom: 5px;
+      border: 1px solid #e1e1e1;
+      font-weight: 500;
+      font-size: 16px;
+    }
+  }
+
+  &-content {
+    cursor: pointer;
+    text-align: center;
+
+    div {
+      border: 1px solid #e7e7e7;
+      padding-top: 5px;
+      padding-bottom: 5px;
+    }
+
+    &-active div {
+      padding-top: 7px;
+      padding-bottom: 7px;
+      background-color: #a3e7d2;
+      border: 1px solid #7fdbbe;;
+      font-weight: 600;
+
+      animation-duration: 0.4s;
+      animation-name: request_row-appears;
+    }
+  }
+}
+
+@keyframes request_row-appears {
+  from {
+    border: 1px solid #e7e7e7;
+    padding-top: 5px;
+    padding-bottom: 5px;
+  }
+
+  to {
+    padding-top: 7px;
+    padding-bottom: 7px;
+    background-color: #a3e7d2;
+    border: 1px solid #7fdbbe;;
+    font-weight: 600;
+  }
+}

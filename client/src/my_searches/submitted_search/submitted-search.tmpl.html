@@ -1,0 +1,28 @@
+<div class="row"
+     (click)="toggleDetailedInfo()"
+     title="Click to show request details">
+    <div class="col-md-4">Request #{{request.requestID}}</div>
+    <div class="col-md-4">{{request.requestDate | date}}</div>
+    <div class="col-md-4" [ngClass]="getStatusClass()">
+        <i [ngClass]="getStatusSymbol()" aria-hidden="true"></i>
+        {{request.status}}
+    </div>
+</div>
+<div [ngClass]="{'rea-submitted_search-det_info': showDetailedInfo}">
+    <div class="row">
+        <div class="col-md-6">Street Address</div>
+        <div class="col-md-6">{{request.property.streetAddress}}</div>
+    </div>
+    <div class="row">
+        <div class="col-md-6">City</div>
+        <div class="col-md-6">{{request.property.city}}</div>
+    </div>
+    <div class="row">
+        <div class="col-md-6">State</div>
+        <div class="col-md-6">{{request.property.state}}</div>
+    </div>
+    <div class="row">
+        <div class="col-md-6">ZIP</div>
+        <div class="col-md-6">{{request.property.zip}}</div>
+    </div>
+</div>

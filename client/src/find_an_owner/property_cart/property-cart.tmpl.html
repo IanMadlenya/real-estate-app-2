@@ -1,0 +1,15 @@
+<div class="rea-property_cart">
+    <div class="rea-property_cart-title">
+        <i class="fa fa-shopping-cart" aria-hidden="true"></i>
+        Cart
+    </div>
+    <div>
+        You have added {{properties.length}} properties
+        <div>
+            <a href="#" (click)="initAndShowModal($event)" [hidden]="properties.length<1">click to view them</a>
+        </div>
+    </div>
+    <p>Total Cost: {{totalCost}}$</p>
+    <button (click)="checkout($event)" class="btn btn-primary btn-lg btn-block rea-button"
+            [disabled]="properties.length<1">Checkout</button>
+</div>

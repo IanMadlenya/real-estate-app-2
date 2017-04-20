@@ -1,0 +1,24 @@
+<div class="row rea-request_row-content"
+     (click)="togglePropertyRows()"
+     [ngClass]="{'rea-request_row-content-active': showPropertyRows}"
+     title="Click to show request details">
+    <div class="col-md-4">Request #{{request.requestID}}</div>
+    <div class="col-md-4">{{request.submissionDate | date}}</div>
+    <div class="col-md-4" [ngClass]="getStatusClass()">
+        <i [ngClass]="getStatusSymbol()" aria-hidden="true"></i>
+        {{request.status}}
+    </div>
+</div>
+
+<div class="row rea-property_row-header" [hidden]="!showPropertyRows">
+    <div class="col-md-1">№</div>
+    <div class="col-md-3">Street address</div>
+    <div class="col-md-3">City</div>
+    <div class="col-md-3">State</div>
+    <div class="col-md-2">ZIP</div>
+</div>
+<property-row [hidden]="!showPropertyRows"
+              *ngFor="let property of request.propertiesList; let i = index"
+              [property]="property"
+              [ind]="i">
+</property-row>

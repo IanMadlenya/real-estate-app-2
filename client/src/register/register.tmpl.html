@@ -1,0 +1,113 @@
+<app-header [page]="'Register'"></app-header>
+
+<div class="rea-register rea-content container">
+    <div class="row">
+        <div class="col-md-3"></div>
+        <div class="col-md-6">
+            <div class="rea-content-inner">
+                <div class="rea-content-title hidden-xs">
+                    <h3>Register</h3>
+                </div>
+
+                <div *ngIf="regSucceed" class="rea-alert alert alert-success">
+                    <div class="rea-register-signinlink">
+                        <strong>Registration has completed successfully.</strong>
+                        <a [routerLink]="['/signin']" title="Sign In">
+                            Now you can sing in
+                        </a>
+                    </div>
+                </div>
+
+                <div class="well well-lg rea-well rea-inputs">
+                    <form class="form-horizontal"
+                          role="form"
+                          id="rea-register-form"
+                          [formGroup]="registerForm"
+                          (submit)="doRegister($event)">
+                        <div class="form-group">
+                            <label for="rea-register-username"
+                                   class="col-lg-3 control-label">Username</label>
+                            <div class="col-lg-9">
+                                <input class="form-control"
+                                       formControlName="userName"
+                                       type="text"
+                                       placeholder="User Name"
+                                       id="rea-register-username">
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label for="rea-register-firstname"
+                                   class="col-lg-3 control-label">First Name</label>
+                            <div class="col-lg-9">
+                                <input class="form-control"
+                                       formControlName="firstName"
+                                       type="text"
+                                       placeholder="First Name"
+                                       id="rea-register-firstname">
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label for="rea-register-lastname"
+                                   class="col-lg-3 control-label">Last Name</label>
+                            <div class="col-lg-9">
+                                <input class="form-control"
+                                       formControlName="lastName"
+                                       type="text"
+                                       placeholder="Last Name"
+                                       id="rea-register-lastname">
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label for="rea-register-email"
+                                   class="col-lg-3 control-label">Email</label>
+                            <div class="col-lg-9">
+                                <input class="form-control"
+                                       formControlName="email"
+                                       type="email"
+                                       placeholder="Email"
+                                       id="rea-register-email">
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label for="rea-register-password"
+                                   class="col-lg-3 control-label">Password</label>
+                            <div class="col-lg-9">
+                                <input class="form-control"
+                                       formControlName="password"
+                                       type="password"
+                                       placeholder="Password"
+                                       id="rea-register-password">
+                            </div>
+                        </div>
+                        <!--<div class="form-group">
+                            <label for="rea-register-repeatedpass"
+                                   class="col-lg-3 control-label">Repeat password</label>
+                            <div class="col-lg-9">
+                                <input class="form-control"
+                                       formControlName="repeatedPassword"
+                                       type="password"
+                                       placeholder="Repeat password"
+                                       id="rea-register-repeatedpass">
+                            </div>
+                        </div>-->
+                        <div class="form-group">
+                            <div class="col-lg-offset-3 col-lg-9">
+                                <button class="btn btn-primary btn-lg btn-block rea-button"
+                                        type="submit">Register
+                                </button>
+                            </div>
+                        </div>
+                    </form>
+                    <div class="rea-register-signinlink">
+                        <a [routerLink]="['/signin']" title="Sign In">
+                            Already have an account?
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-3"></div>
+    </div>
+</div>
+
+<app-footer></app-footer>
